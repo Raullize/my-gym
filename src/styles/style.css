@@ -332,6 +332,18 @@ header.fixo {
 }
 
 /* SERVIÇOS */
+.servicos {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../assets/images/bg.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  color: var(--cor-clara);
+}
+
+.servicos .titulo-secao h2,
+.servicos .titulo-secao p {
+  color: var(--cor-clara);
+}
+
 .servicos-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -339,7 +351,7 @@ header.fixo {
 }
 
 .servico-card {
-  background-color: var(--cor-cinza);
+  background-color: var(--cor-secundaria);
   border-radius: 10px;
   overflow: hidden;
   transition: all 0.3s ease;
@@ -368,6 +380,7 @@ header.fixo {
 
 .servico-conteudo {
   padding: 1.5rem;
+  color: var(--cor-clara);
 }
 
 .servico-conteudo h3 {
