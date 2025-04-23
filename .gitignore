@@ -1,0 +1,40 @@
+# Dependências
+node_modules/
+package-lock.json
+yarn.lock
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Arquivos de ambiente
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Arquivos de build/dist
+/dist
+/build
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Outros
+.cache/
+coverage/
+.tmp/
+temp/
+
+# Arquivos específicos de editor
+# Nota: Mantivemos .vscode já que você configurou extensões específicas
+# Se quiser ignorar os arquivos do VS Code, descomente as linhas abaixo
+# .vscode/*
+# !.vscode/extensions.json
+# !.vscode/settings.json 
