@@ -530,7 +530,7 @@ header.fixo {
 
 /* IMC CALCULATOR */
 .imc {
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../img/bg.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../assets/images/bg.jpg');
   background-size: cover;
   background-attachment: fixed;
   color: var(--cor-clara);
@@ -692,7 +692,7 @@ header.fixo {
 
 /* DEPOIMENTOS */
 .depoimentos {
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../img/bg.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../assets/images/bg.jpg');
   background-size: cover;
   background-attachment: fixed;
   color: var(--cor-clara);

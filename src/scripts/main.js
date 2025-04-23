@@ -10,8 +10,8 @@
         
         // Inicialização da imagem de fundo do hero
         const headerBackgrounds = [
-            'url(../img/carousel-1.jpg)',
-            'url(../img/carousel-2.jpg)'
+            'url(../src/assets/images/carousel-1.jpg)',
+            'url(../src/assets/images/carousel-2.jpg)'
         ];
         let currentBgIndex = 0;
         
