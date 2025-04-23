@@ -1,0 +1,29 @@
+{
+  "name": "mygym",
+  "version": "1.0.0",
+  "description": "Website para academia MyGYM - A melhor academia da cidade",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "keywords": [
+    "academia",
+    "fitness",
+    "saúde",
+    "bem-estar",
+    "musculação",
+    "treinamento",
+    "personal trainer"
+  ],
+  "author": "MyGYM",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "live-server": "^1.2.2"
+  }
+} 
