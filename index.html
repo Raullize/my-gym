@@ -1,22 +1,39 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyGYM - Academia de Elite</title>
-    <meta content="A melhor academia da cidade" name="description">
-    
+    <title>MyGYM - Academia Premium de Fitness e Bem-estar</title>
+    <meta
+        content="Academia premium com infraestrutura completa, profissionais qualificados e métodos inovadores para sua melhor experiência fitness"
+        name="description">
+    <meta name="keywords"
+        content="academia, musculação, treino, fitness, saúde, bem-estar, personal trainer, atividade física">
+    <meta name="author" content="MyGYM">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.mygym.com.br" />
+    <meta property="og:title" content="MyGYM - Academia Premium de Fitness e Bem-estar">
+    <meta property="og:description"
+        content="Academia premium com infraestrutura completa, profissionais qualificados e métodos inovadores para sua melhor experiência fitness">
+    <meta property="og:image" content="src/assets/logos/logo.png">
+    <meta property="og:url" content="https://www.mygym.com.br">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
     <!-- Favicon -->
     <link rel="icon" href="src/assets/logos/logo.png" type="image/png">
-    
+    <link rel="apple-touch-icon" href="src/assets/logos/logo.png">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- CSS Personalizado -->
     <link href="src/styles/style.css" rel="stylesheet">
 </head>
@@ -25,7 +42,7 @@
     <!-- Header -->
     <header>
         <div class="container">
-            <nav class="navbar">
+            <nav class="navbar" aria-label="Menu principal">
                 <a href="#" class="logo">My<span>GYM</span></a>
                 <ul class="menu">
                     <li><a href="#home">Início</a></li>
@@ -35,339 +52,395 @@
                     <li><a href="#equipe">Equipe</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
-                <button class="menu-btn">
+                <button class="menu-btn" aria-label="Abrir menu" aria-expanded="false">
                     <span class="hamburger-icon"></span>
                 </button>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Transforme seu corpo e sua vida na <span class="texto-destaque">MyGYM</span></h1>
-                <p>A academia mais completa da cidade com os melhores profissionais e equipamentos de ponta para ajudar você a alcançar seus objetivos.</p>
-                <div class="hero-btns">
-                    <a href="#sobre" class="btn btn-primario">Conheça nossa academia</a>
-                    <a href="#calendario" class="btn btn-secundario">Ver horários</a>
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Transforme seu corpo e sua vida na <span class="texto-destaque">MyGYM</span></h1>
+                    <p>A academia mais completa e moderna com os melhores profissionais e equipamentos de ponta para
+                        ajudar
+                        você a alcançar seus objetivos.</p>
+                    <div class="hero-btns">
+                        <a href="#sobre" class="btn btn-primario" aria-label="Conheça mais sobre a MyGYM">Conheça nossa
+                            academia</a>
+                        <a href="#calendario" class="btn btn-secundario" aria-label="Ver horários de funcionamento">Ver
+                            horários</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Sobre Nós -->
-    <section id="sobre" class="sobre secao">
-        <div class="container">
-            <div class="titulo-secao">
-                <h2>Sobre a <span class="texto-destaque">MyGYM</span></h2>
-                <p>Conheça nossa história e o que nos torna referência em fitness e saúde</p>
-    </div>
-    
-            <div class="sobre-container">
-                <div class="sobre-img">
-                    <img src="src/assets/images/athletic-person-exercising-working-out.jpg" alt="Pessoa treinando na MyGYM">
+        <!-- Sobre Nós -->
+        <section id="sobre" class="sobre secao">
+            <div class="container">
+                <div class="titulo-secao">
+                    <h2>Sobre a <span class="texto-destaque">MyGYM</span></h2>
+                    <p>Conheça nossa história e o que nos torna referência em fitness e saúde</p>
                 </div>
-                <div class="sobre-texto">
-                    <h2>10 Anos de Excelência em Fitness</h2>
-                    <p>A MyGYM nasceu da paixão por proporcionar saúde e bem-estar através da atividade física de qualidade. Desde 2013, temos ajudado milhares de pessoas a transformarem seus corpos e vidas com métodos comprovados e orientação profissional.</p>
-                    <p>Nossa missão é oferecer o melhor ambiente de treinamento, com equipamentos modernos e instrutores capacitados para garantir que você alcance seus objetivos de forma segura e eficiente.</p>
-                    
-                    <div class="sobre-cards">
-                        <div class="sobre-card">
-                            <i class="fas fa-medal"></i>
-                            <h3>Academia Premiada</h3>
-                            <p>Reconhecida como a melhor academia da cidade por 5 anos consecutivos.</p>
-                        </div>
-                        <div class="sobre-card">
-                            <i class="fas fa-dumbbell"></i>
-                            <h3>Equipamentos Premium</h3>
-                            <p>Aparelhos de última geração para otimizar seus resultados.</p>
-                        </div>
-                        <div class="sobre-card">
-                            <i class="fas fa-users"></i>
-                            <h3>Profissionais Qualificados</h3>
-                            <p>Equipe composta por especialistas formados e certificados.</p>
-                        </div>
-                        <div class="sobre-card">
-                            <i class="fas fa-clock"></i>
-                            <h3>Horário Estendido</h3>
-                            <p>Aberto todos os dias com horários que se encaixam na sua rotina.</p>
-                </div>
-            </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Serviços -->
-    <section id="servicos" class="servicos secao">
-        <div class="container">
-            <div class="titulo-secao">
-                <h2>Nossos <span class="texto-destaque">Serviços</span></h2>
-                <p>Uma variedade de atividades para todos os objetivos e níveis de condicionamento</p>
-            </div>
-            
-            <div class="servicos-grid">
-                <div class="servico-card">
-                    <div class="servico-img">
-                        <img src="src/assets/images/feature-1.jpg" alt="Musculação">
+                <div class="sobre-container">
+                    <div class="sobre-img">
+                        <img src="src/assets/images/athletic-person-exercising-working-out.jpg"
+                            alt="Pessoa realizando treino intenso de musculação na MyGYM com equipamentos modernos">
                     </div>
-                    <div class="servico-conteudo">
-                        <h3>Musculação</h3>
-                        <p>Área completa com equipamentos modernos para todos os grupos musculares, com orientação profissional para maximizar seus resultados.</p>
-                        <a href="#" class="btn btn-primario">Saiba mais</a>
-                    </div>
-                </div>
-                
-                <div class="servico-card">
-                    <div class="servico-img">
-                        <img src="src/assets/images/feature-2.jpg" alt="Aulas Coletivas">
-            </div>
-                    <div class="servico-conteudo">
-                        <h3>Aulas Coletivas</h3>
-                        <p>Diversas modalidades como Spinning, Zumba, Pilates, Funcional, HIIT e muito mais, em diferentes horários para sua conveniência.</p>
-                        <a href="#" class="btn btn-primario">Saiba mais</a>
-                    </div>
-                </div>
-                
-                <div class="servico-card">
-                    <div class="servico-img">
-                        <img src="src/assets/images/feature-3.jpg" alt="Personal Trainer">
-            </div>
-                    <div class="servico-conteudo">
-                        <h3>Personal Trainer</h3>
-                        <p>Treinamento personalizado com profissionais especializados, criando programas exclusivos para seus objetivos específicos.</p>
-                        <a href="#" class="btn btn-primario">Saiba mais</a>
-                    </div>
-                </div>
-                
-                <div class="servico-card">
-                    <div class="servico-img">
-                        <img src="src/assets/images/feature-4.jpg" alt="Avaliação Física">
-            </div>
-                    <div class="servico-conteudo">
-                        <h3>Avaliação Física</h3>
-                        <p>Avaliação completa com análise de composição corporal, medidas e testes de condicionamento para acompanhar sua evolução.</p>
-                        <a href="#" class="btn btn-primario">Saiba mais</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                    <article class="sobre-texto">
+                        <h2>10 Anos de Excelência em Fitness</h2>
+                        <p>A MyGYM nasceu da paixão por proporcionar saúde e bem-estar através da atividade física de
+                            qualidade. Desde 2013, temos ajudado milhares de pessoas a transformarem seus corpos e vidas
+                            com
+                            métodos comprovados e orientação profissional.</p>
+                        <p>Nossa missão é oferecer o melhor ambiente de treinamento, com equipamentos modernos e
+                            instrutores
+                            capacitados para garantir que você alcance seus objetivos de forma segura e eficiente.</p>
 
-    <!-- Horários de Funcionamento -->
-    <section id="calendario" class="calendario secao">
-        <div class="container">
-            <div class="titulo-secao">
-                <h2>Horários de <span class="texto-destaque">Funcionamento</span></h2>
-                <p>Confira nossos horários de atendimento e planeje sua visita à academia</p>
-            </div>
-    
-            <div class="calendario-container">
-                <div class="horarios-funcionamento">
-                    <h3>Horário Semanal</h3>
-                    
-                    <div class="dias-horarios">
-                        <div class="dia-horario">
-                            <div class="dia">Segunda a Sexta</div>
-                            <div class="horario">06:00 - 23:00</div>
+                        <div class="sobre-cards">
+                            <div class="sobre-card">
+                                <i class="fas fa-medal"></i>
+                                <h3>Academia Premiada</h3>
+                                <p>Reconhecida como referência em qualidade por 5 anos consecutivos.</p>
+                            </div>
+                            <div class="sobre-card">
+                                <i class="fas fa-dumbbell"></i>
+                                <h3>Equipamentos Premium</h3>
+                                <p>Aparelhos de última geração para otimizar seus resultados.</p>
+                            </div>
+                            <div class="sobre-card">
+                                <i class="fas fa-users"></i>
+                                <h3>Profissionais Qualificados</h3>
+                                <p>Equipe composta por especialistas formados e certificados.</p>
+                            </div>
+                            <div class="sobre-card">
+                                <i class="fas fa-clock"></i>
+                                <h3>Horário Estendido</h3>
+                                <p>Aberto todos os dias com horários que se encaixam na sua rotina.</p>
+                            </div>
                         </div>
-                        
-                        <div class="dia-horario">
-                            <div class="dia">Sábado</div>
-                            <div class="horario">08:00 - 18:00</div>
-                        </div>
-                        
-                        <div class="dia-horario">
-                            <div class="dia">Domingo</div>
-                            <div class="horario">08:00 - 14:00</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="status-academia">
-                    <h3>Status Atual</h3>
-                    <div class="status-atual">
-                        <div id="status-indicator" class="status-indicator"></div>
-                        <div id="status-text" class="status-text">Verificando...</div>
-                    </div>
-                    <div id="horario-atual" class="horario-atual"></div>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Calculadora IMC -->
-    <section id="imc" class="imc secao">
-        <div class="container">
-            <div class="imc-container">
-                <div class="imc-texto">
-                    <h2>Calculadora de <span class="texto-destaque">IMC</span></h2>
-                    <p>O Índice de Massa Corporal (IMC) é uma medida que relaciona seu peso e altura para avaliar se você está em um peso saudável. É uma ferramenta útil para identificar possíveis riscos à saúde relacionados ao peso.</p>
-                    <p>Utilize nossa calculadora para descobrir seu IMC atual e entender melhor sua condição física. Nossos treinadores podem ajudá-lo a alcançar e manter um peso saudável com programas personalizados.</p>
+        <!-- Serviços -->
+        <section id="servicos" class="servicos secao">
+            <div class="container">
+                <div class="titulo-secao">
+                    <h2>Nossos <span class="texto-destaque">Serviços</span></h2>
+                    <p>Uma variedade de atividades para todos os objetivos e níveis de condicionamento</p>
                 </div>
-                
-                <div class="imc-form">
-                    <h3>Calcule seu IMC</h3>
+
+                <div class="servicos-grid">
+                    <article class="servico-card">
+                        <div class="servico-img">
+                            <img src="src/assets/images/feature-1.jpg"
+                                alt="Área de musculação com equipamentos modernos e profissionais da MyGYM">
+                        </div>
+                        <div class="servico-conteudo">
+                            <h3>Musculação</h3>
+                            <p>Área completa com equipamentos modernos para todos os grupos musculares, com orientação
+                                profissional para maximizar seus resultados.</p>
+                            <a href="#" class="btn btn-primario" aria-label="Saiba mais sobre musculação">Saiba mais</a>
+                        </div>
+                    </article>
+
+                    <article class="servico-card">
+                        <div class="servico-img">
+                            <img src="src/assets/images/feature-2.jpg"
+                                alt="Aula coletiva de condicionamento físico com instrutor especializado na MyGYM">
+                        </div>
+                        <div class="servico-conteudo">
+                            <h3>Aulas Coletivas</h3>
+                            <p>Diversas modalidades como Spinning, Zumba, Pilates, Funcional, HIIT e muito mais, em
+                                diferentes horários para sua conveniência.</p>
+                            <a href="#" class="btn btn-primario" aria-label="Saiba mais sobre aulas coletivas">Saiba
+                                mais</a>
+                        </div>
+                    </article>
+
+                    <article class="servico-card">
+                        <div class="servico-img">
+                            <img src="src/assets/images/feature-3.jpg"
+                                alt="Sessão de personal trainer com acompanhamento individualizado na MyGYM">
+                        </div>
+                        <div class="servico-conteudo">
+                            <h3>Personal Trainer</h3>
+                            <p>Treinamento personalizado com profissionais especializados, criando programas exclusivos
+                                para
+                                seus objetivos específicos.</p>
+                            <a href="#" class="btn btn-primario" aria-label="Saiba mais sobre personal trainer">Saiba
+                                mais</a>
+                        </div>
+                    </article>
+
+                    <article class="servico-card">
+                        <div class="servico-img">
+                            <img src="src/assets/images/feature-4.jpg"
+                                alt="Profissional realizando avaliação física completa em aluno da MyGYM">
+                        </div>
+                        <div class="servico-conteudo">
+                            <h3>Avaliação Física</h3>
+                            <p>Avaliação completa com análise de composição corporal, medidas e testes de
+                                condicionamento
+                                para acompanhar sua evolução.</p>
+                            <a href="#" class="btn btn-primario" aria-label="Saiba mais sobre avaliação física">Saiba
+                                mais</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Horários de Funcionamento -->
+        <section id="calendario" class="calendario secao">
+            <div class="container">
+                <div class="titulo-secao">
+                    <h2>Horários de <span class="texto-destaque">Funcionamento</span></h2>
+                    <p>Confira nossos horários de atendimento e planeje sua visita à academia</p>
+                </div>
+
+                <div class="calendario-container">
+                    <article class="horarios-funcionamento">
+                        <h3>Horário Semanal</h3>
+
+                        <div class="dias-horarios">
+                            <div class="dia-horario">
+                                <div class="dia">Segunda a Sexta</div>
+                                <div class="horario">06:00 - 23:00</div>
+                            </div>
+
+                            <div class="dia-horario">
+                                <div class="dia">Sábado</div>
+                                <div class="horario">08:00 - 18:00</div>
+                            </div>
+
+                            <div class="dia-horario">
+                                <div class="dia">Domingo</div>
+                                <div class="horario">08:00 - 14:00</div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <aside class="status-academia">
+                        <h3>Status Atual</h3>
+                        <div class="status-atual">
+                            <div id="status-indicator" class="status-indicator"></div>
+                            <div id="status-text" class="status-text">Verificando...</div>
+                        </div>
+                        <div id="horario-atual" class="horario-atual"></div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- Calculadora IMC -->
+        <section id="imc" class="imc secao">
+            <div class="container">
+                <div class="imc-container">
+                    <article class="imc-texto">
+                        <h2>Calculadora de <span class="texto-destaque">IMC</span></h2>
+                        <p>O Índice de Massa Corporal (IMC) é uma medida que relaciona seu peso e altura para avaliar se
+                            você está em um peso saudável. É uma ferramenta útil para identificar possíveis riscos à
+                            saúde
+                            relacionados ao peso.</p>
+                        <p>Utilize nossa calculadora para descobrir seu IMC atual e entender melhor sua condição física.
+                            Nossos treinadores podem ajudá-lo a alcançar e manter um peso saudável com programas
+                            personalizados.</p>
+                    </article>
+
+                    <aside class="imc-form">
+                        <h3>Calcule seu IMC</h3>
+                        <form aria-label="Formulário de cálculo de IMC">
                             <div class="form-row">
-                        <div class="form-grupo">
-                            <label for="peso">Peso (kg)</label>
-                            <input type="number" id="peso" placeholder="Ex: 70">
+                                <div class="form-grupo">
+                                    <label for="peso">Peso (kg)</label>
+                                    <input type="number" id="peso" placeholder="Ex: 70">
                                 </div>
-                        <div class="form-grupo">
-                            <label for="altura">Altura (cm)</label>
-                            <input type="number" id="altura" placeholder="Ex: 170">
+                                <div class="form-grupo">
+                                    <label for="altura">Altura (cm)</label>
+                                    <input type="number" id="altura" placeholder="Ex: 170">
                                 </div>
                             </div>
-                    
+
                             <div class="form-row">
-                        <div class="form-grupo">
-                            <label for="idade">Idade</label>
-                            <input type="number" id="idade" placeholder="Ex: 30">
+                                <div class="form-grupo">
+                                    <label for="idade">Idade</label>
+                                    <input type="number" id="idade" placeholder="Ex: 30">
                                 </div>
-                        <div class="form-grupo">
-                            <label for="genero">Gênero</label>
-                            <select id="genero">
-                                <option value="">Selecione</option>
-                                <option value="masculino">Masculino</option>
-                                <option value="feminino">Feminino</option>
-                            </select>
+                                <div class="form-grupo">
+                                    <label for="genero">Gênero</label>
+                                    <select id="genero">
+                                        <option value="">Selecione</option>
+                                        <option value="masculino">Masculino</option>
+                                        <option value="feminino">Feminino</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <button type="button" id="calcular-imc" class="btn btn-primario"
+                                style="width: 100%;">Calcular Agora</button>
+                        </form>
+
+                        <div id="resultado-imc"
+                            style="margin-top: 1rem; display: none; text-align: center; padding: 1rem; background-color: rgba(255, 255, 255, 0.1); border-radius: 5px;">
+                            <!-- Resultado será inserido via JavaScript -->
                         </div>
-                    </div>
-                    
-                    <button id="calcular-imc" class="btn btn-primario" style="width: 100%;">Calcular Agora</button>
-                    
-                    <div id="resultado-imc" style="margin-top: 1rem; display: none; text-align: center; padding: 1rem; background-color: rgba(255, 255, 255, 0.1); border-radius: 5px;">
-                        <!-- Resultado será inserido via JavaScript -->
-                    </div>
+                    </aside>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Equipe -->
-    <section id="equipe" class="equipe secao">
-        <div class="container">
-            <div class="titulo-secao">
-                <h2>Nossa <span class="texto-destaque">Equipe</span></h2>
-                <p>Conheça os profissionais que farão parte da sua jornada fitness</p>
-    </div>
-    
-            <div class="equipe-grid">
-                <div class="equipe-card">
-                    <div class="equipe-img">
-                        <img src="src/assets/images/team-1.jpg" alt="Treinador">
-                        <div class="equipe-social">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-                    </div>
-                    <div class="equipe-info">
-                        <h3>Carlos Silva</h3>
-                        <p>Especialista em Musculação</p>
-                    </div>
+        <!-- Equipe -->
+        <section id="equipe" class="equipe secao">
+            <div class="container">
+                <div class="titulo-secao">
+                    <h2>Nossa <span class="texto-destaque">Equipe</span></h2>
+                    <p>Conheça os profissionais que farão parte da sua jornada fitness</p>
                 </div>
-                
-                <div class="equipe-card">
-                    <div class="equipe-img">
-                        <img src="src/assets/images/team-2.jpg" alt="Treinador">
-                        <div class="equipe-social">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-                    </div>
-                    <div class="equipe-info">
-                        <h3>André Oliveira</h3>
-                        <p>Especialista em Yoga e Pilates</p>
-                    </div>
-                </div>
-                
-                <div class="equipe-card">
-                    <div class="equipe-img">
-                        <img src="src/assets/images/team-3.jpg" alt="Treinador">
-                        <div class="equipe-social">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-                    </div>
-                    <div class="equipe-info">
-                        <h3>Rafael Mendes</h3>
-                        <p>Especialista em Artes Marciais</p>
-                    </div>
-                </div>
-                
-                <div class="equipe-card">
-                    <div class="equipe-img">
-                        <img src="src/assets/images/team-4.jpg" alt="Treinador">
-                        <div class="equipe-social">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-                    </div>
-                    <div class="equipe-info">
-                        <h3>Gustavo Santos</h3>
-                        <p>Especialista em Cardio e HIIT</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Depoimentos -->
-    <section id="depoimentos" class="depoimentos secao">
-        <div class="container">
-            <div class="titulo-secao">
-                <h2>O que <span class="texto-destaque">Dizem</span> Nossos Alunos</h2>
-                <p>Histórias reais de quem transformou seu corpo e vida na MyGYM</p>
-                                        </div>
-            
-            <div class="depoimentos-slider">
-                <div class="depoimento" style="display: none;">
-                    <div class="depoimento-texto">
-                        "Treino na MyGYM há 8 meses e os resultados são impressionantes. A equipe é extremamente atenciosa e os profissionais são altamente qualificados. Recomendo a todos que buscam qualidade e resultados."
-                                    </div>
-                    <div class="depoimento-cliente">
-                        <img src="src/assets/images/testimonial-1.jpg" alt="Cliente">
-                        <h4>Rodrigo Almeida</h4>
-                        <p>Engenheiro Civil</p>
-                                    </div>
-                                </div>
-                
-                <div class="depoimento" style="display: none;">
-                    <div class="depoimento-texto">
-                        "Depois de passar por várias academias, finalmente encontrei a MyGYM. O diferencial está nos profissionais que realmente se importam com seu progresso e na estrutura completa. Minha qualidade de vida melhorou significativamente."
-                                        </div>
-                    <div class="depoimento-cliente">
-                        <img src="src/assets/images/testimonial-2.jpg" alt="Cliente">
-                        <h4>Carlos Ribeiro</h4>
-                        <p>Advogado</p>
-                    </div>
-                </div>
-                
-                <div class="depoimento" style="display: none;">
-                    <div class="depoimento-texto">
-                        "Comecei a treinar na MyGYM para perder peso e acabei descobrindo uma nova paixão pelo fitness. Os treinadores são incríveis e o ambiente é super motivador. Perdi 15kg em 6 meses e ganhei muito mais disposição."
-                    </div>
-                    <div class="depoimento-cliente">
-                        <img src="src/assets/images/testimonial-3.jpg" alt="Cliente">
-                        <h4>Bruno Costa</h4>
-                        <p>Professor</p>
-                    </div>
-                </div>
-                
-                <div class="depoimento-slider-dots">
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
+                <div class="equipe-grid">
+                    <article class="equipe-card">
+                        <div class="equipe-img">
+                            <img src="src/assets/images/team-1.jpg"
+                                alt="Carlos Silva - Especialista em Musculação da MyGYM">
+                            <div class="equipe-social">
+                                <a href="#" aria-label="Facebook de Carlos Silva"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" aria-label="Instagram de Carlos Silva"><i class="fab fa-instagram"></i></a>
+                                <a href="#" aria-label="LinkedIn de Carlos Silva"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="equipe-info">
+                            <h3>Carlos Silva</h3>
+                            <p>Especialista em Musculação</p>
+                        </div>
+                    </article>
+
+                    <article class="equipe-card">
+                        <div class="equipe-img">
+                            <img src="src/assets/images/team-2.jpg"
+                                alt="André Oliveira - Especialista em Yoga e Pilates da MyGYM">
+                            <div class="equipe-social">
+                                <a href="#" aria-label="Facebook de André Oliveira"><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a href="#" aria-label="Instagram de André Oliveira"><i
+                                        class="fab fa-instagram"></i></a>
+                                <a href="#" aria-label="LinkedIn de André Oliveira"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="equipe-info">
+                            <h3>André Oliveira</h3>
+                            <p>Especialista em Yoga e Pilates</p>
+                        </div>
+                    </article>
+
+                    <article class="equipe-card">
+                        <div class="equipe-img">
+                            <img src="src/assets/images/team-3.jpg"
+                                alt="Rafael Mendes - Especialista em Artes Marciais da MyGYM">
+                            <div class="equipe-social">
+                                <a href="#" aria-label="Facebook de Rafael Mendes"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" aria-label="Instagram de Rafael Mendes"><i class="fab fa-instagram"></i></a>
+                                <a href="#" aria-label="LinkedIn de Rafael Mendes"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="equipe-info">
+                            <h3>Rafael Mendes</h3>
+                            <p>Especialista em Artes Marciais</p>
+                        </div>
+                    </article>
+
+                    <article class="equipe-card">
+                        <div class="equipe-img">
+                            <img src="src/assets/images/team-4.jpg"
+                                alt="Gustavo Santos - Especialista em Cardio e HIIT da MyGYM">
+                            <div class="equipe-social">
+                                <a href="#" aria-label="Facebook de Gustavo Santos"><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a href="#" aria-label="Instagram de Gustavo Santos"><i
+                                        class="fab fa-instagram"></i></a>
+                                <a href="#" aria-label="LinkedIn de Gustavo Santos"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="equipe-info">
+                            <h3>Gustavo Santos</h3>
+                            <p>Especialista em Cardio e HIIT</p>
+                        </div>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Depoimentos -->
+        <section id="depoimentos" class="depoimentos secao">
+            <div class="container">
+                <div class="titulo-secao">
+                    <h2>O que <span class="texto-destaque">Dizem</span> Nossos Alunos</h2>
+                    <p>Histórias reais de quem transformou seu corpo e vida na MyGYM</p>
+                </div>
+
+                <div class="depoimentos-slider">
+                    <article class="depoimento" style="display: none;">
+                        <blockquote class="depoimento-texto">
+                            "Treino na MyGYM há 8 meses e os resultados são impressionantes. A equipe é extremamente
+                            atenciosa e os profissionais são altamente qualificados. Recomendo a todos que buscam
+                            qualidade
+                            e resultados."
+                        </blockquote>
+                        <div class="depoimento-cliente">
+                            <img src="src/assets/images/testimonial-1.jpg"
+                                alt="Rodrigo Almeida - Cliente satisfeito da MyGYM">
+                            <h4>Rodrigo Almeida</h4>
+                            <p>Engenheiro Civil</p>
+                        </div>
+                    </article>
+
+                    <article class="depoimento" style="display: none;">
+                        <blockquote class="depoimento-texto">
+                            "Depois de passar por várias academias, finalmente encontrei a MyGYM. O diferencial está nos
+                            profissionais que realmente se importam com seu progresso e na estrutura completa. Minha
+                            qualidade de vida melhorou significativamente."
+                        </blockquote>
+                        <div class="depoimento-cliente">
+                            <img src="src/assets/images/testimonial-2.jpg"
+                                alt="Carlos Ribeiro - Cliente satisfeito da MyGYM">
+                            <h4>Carlos Ribeiro</h4>
+                            <p>Advogado</p>
+                        </div>
+                    </article>
+
+                    <article class="depoimento" style="display: none;">
+                        <blockquote class="depoimento-texto">
+                            "Comecei a treinar na MyGYM para perder peso e acabei descobrindo uma nova paixão pelo
+                            fitness.
+                            Os treinadores são incríveis e o ambiente é super motivador. Perdi 15kg em 6 meses e ganhei
+                            muito mais disposição."
+                        </blockquote>
+                        <div class="depoimento-cliente">
+                            <img src="src/assets/images/testimonial-3.jpg"
+                                alt="Bruno Costa - Cliente satisfeito que perdeu 15kg na MyGYM">
+                            <h4>Bruno Costa</h4>
+                            <p>Professor</p>
+                        </div>
+                    </article>
+
+                    <div class="depoimento-slider-dots">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer id="contato">
@@ -390,13 +463,13 @@
                         </li>
                     </ul>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-        </div>
-    </div>
-    
+                        <a href="#" aria-label="Facebook da MyGYM"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram da MyGYM"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn da MyGYM"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Canal do YouTube da MyGYM"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
                 <div class="footer-coluna">
                     <h3>Links Rápidos</h3>
                     <ul class="footer-links">
@@ -407,7 +480,7 @@
                         <li><a href="#equipe">Equipe</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-coluna">
                     <h3>Serviços</h3>
                     <ul class="footer-links">
@@ -418,17 +491,17 @@
                         <li><a href="#">Nutrição Esportiva</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-coluna">
                     <h3>Horário de Funcionamento</h3>
                     <div class="footer-horario">
                         <p><strong>Segunda a Sexta:</strong> 06:00 - 23:00</p>
                         <p><strong>Sábado:</strong> 08:00 - 18:00</p>
                         <p><strong>Domingo:</strong> 08:00 - 14:00</p>
-            </div>
+                    </div>
                 </div>
             </div>
-            
+
             <div class="copyright">
                 <p>&copy; MyGYM - Todos os direitos reservados</p>
             </div>
@@ -436,7 +509,7 @@
     </footer>
 
     <!-- Back to Top -->
-    <a href="#" class="back-to-top" title="Voltar ao topo">
+    <a href="#" class="back-to-top" title="Voltar ao topo" aria-label="Botão para voltar ao topo da página">
         <i class="fas fa-chevron-up"></i>
     </a>
 
@@ -445,4 +518,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="src/scripts/main.js"></script>
 </body>
+
 </html>
