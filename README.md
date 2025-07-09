@@ -4,7 +4,7 @@
 
 Esta landing page foi desenvolvida como um modelo pronto para academias que ainda não possuem presença online. "MyGYM" é apenas um nome coringa utilizado como exemplo - esta solução pode ser facilmente adaptada e personalizada para qualquer academia, oferecendo uma interface moderna, responsiva e atrativa que atenda às necessidades específicas de cada cliente.
 
-![Preview da Landing Page](src/assets/logos/logo.png)
+<img src="src/assets/logos/logo.png" alt="Preview da Landing Page" width="200">
 
 ## ✨ Características
 
