@@ -843,6 +843,10 @@ footer {
   justify-content: center;
   align-items: center;
   margin-right: 1rem;
+  font-size: 13px;
+  flex-shrink: 0;
+  text-align: center;
+  line-height: 1;
 }
 
 .footer-links li {
