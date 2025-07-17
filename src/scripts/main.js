@@ -1,25 +1,22 @@
 (function ($) {
     "use strict";
 
-    // Inicialização quando o DOM estiver carregado
     $(document).ready(function () {
         // Menu Mobile
         const menuBtn = $('.menu-btn');
         const menu = $('.menu');
         const header = $('header');
 
-        // Garantir que o menu inicie fechado
         menu.removeClass('ativo');
         menuBtn.removeClass('ativo');
 
-        // Inicialização da imagem de fundo do hero
+        // Background rotativo do hero
         const headerBackgrounds = [
             'url(../src/assets/images/carousel-1.jpg)',
             'url(../src/assets/images/carousel-2.jpg)'
         ];
         let currentBgIndex = 0;
 
-        // Definir imagem inicial
         $('.hero').css({
             'background-image': `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), ${headerBackgrounds[currentBgIndex]}`
         });
@@ -32,7 +29,6 @@
             });
         }
 
-        // Alterar a imagem a cada x segundos
         const intervalo = 7500; // 7.5 segundos
         setInterval(alternarBackground, intervalo);
 
@@ -41,7 +37,6 @@
         $('.copyright p').text(`© ${anoAtual} MyGYM - Todos os direitos reservados`);
 
         menuBtn.on('click', function () {
-            // Só funciona no mobile (max-width: 992px)
             if (window.innerWidth <= 992) {
                 menu.toggleClass('ativo');
                 $(this).toggleClass('ativo');
@@ -50,7 +45,6 @@
 
         // Fechar menu ao clicar em um link
         $('.menu-nav a').on('click', function () {
-            // Só fecha no mobile
             if (window.innerWidth <= 992) {
                 menu.removeClass('ativo');
                 menuBtn.removeClass('ativo');
@@ -84,7 +78,6 @@
             }
         });
 
-        // Força uma verificação inicial do scroll
         if ($(window).scrollTop() > 100) {
             header.addClass('fixo');
             $('.back-to-top').addClass('ativo');
@@ -104,7 +97,6 @@
             const genero = $('#genero').val();
             const resultado = $('#resultado-imc');
 
-            // Validação dos inputs
             if (!peso || !altura) {
                 resultado.text('Por favor, preencha pelo menos o peso e a altura para calcular o IMC.');
                 resultado.css('display', 'block');
@@ -123,7 +115,6 @@
             const classificacao = classificarIMC(imc, genero, idade);
             let mensagem = `Seu IMC é ${imc.toFixed(2)} - ${classificacao}`;
 
-            // Adicionar informações extras baseadas em idade e gênero
             if (idade && genero) {
                 mensagem += calcularInfoAdicional(imc, idade, genero);
             }
@@ -139,20 +130,14 @@
         const depoimentos = $('.depoimento');
 
         if (dots.length > 0 && depoimentos.length > 0) {
-            // Inicializar primeiro depoimento
             depoimentos.hide();
             depoimentos.first().show();
             dots.first().addClass('ativo');
 
             dots.each(function (index) {
                 $(this).on('click', function () {
-                    // Esconder todos os depoimentos
                     depoimentos.hide();
-
-                    // Remover classe ativo de todos os dots
                     dots.removeClass('ativo');
-
-                    // Mostrar o depoimento correspondente
                     depoimentos.eq(index).show();
                     $(this).addClass('ativo');
                 });
@@ -166,23 +151,14 @@
         setInterval(verificarStatusAcademia, 60000);
     });
 
-    // Funções para calcular e classificar IMC
     function calcularIMC(peso, altura) {
-        // A fórmula do IMC é a mesma para ambos os sexos
-        // O que difere são os pontos de corte para classificação
         return peso / (altura * altura);
     }
 
     function classificarIMC(imc, genero, idade) {
-        // Classificação básica (valores gerais)
         if (imc < 16) return 'Magreza grave';
         if (imc < 17) return 'Magreza moderada';
 
-        // Classificação por gênero
-        // Homens e mulheres têm diferentes composições corporais:
-        // - Homens geralmente têm mais massa muscular e menos gordura corporal
-        // - Mulheres têm naturalmente mais gordura corporal distribuída diferentemente
-        // Por isso, os pontos de corte são diferentes para cada gênero
         if (genero === 'masculino') {
             if (imc < 18.5) return 'Magreza leve';
             if (imc < 25) return 'Peso normal';
@@ -191,8 +167,6 @@
             if (imc < 40) return 'Obesidade Grau II';
             return 'Obesidade Grau III';
         } else if (genero === 'feminino') {
-            // Para mulheres, os limites de classificação são ajustados
-            // considerando a maior proporção natural de gordura corporal
             if (imc < 18) return 'Magreza leve';
             if (imc < 24) return 'Peso normal';
             if (imc < 29) return 'Sobrepeso';
@@ -200,7 +174,6 @@
             if (imc < 39) return 'Obesidade Grau II';
             return 'Obesidade Grau III';
         } else {
-            // Para gênero "outro" ou não especificado
             if (imc < 18.5) return 'Magreza leve';
             if (imc < 25) return 'Peso normal';
             if (imc < 30) return 'Sobrepeso';
@@ -213,10 +186,6 @@
     function calcularInfoAdicional(imc, idade, genero) {
         let info = '';
 
-        // Recomendações personalizadas que consideram:
-        // - As diferenças metabólicas entre homens e mulheres
-        // - As mudanças na composição corporal com a idade
-        // - Os diferentes riscos à saúde por faixa etária e gênero
         if (genero === 'masculino') {
             if (idade < 30) {
                 if (imc < 22) info = '\n\nPara homens jovens, considere ganho de massa muscular.';
@@ -239,10 +208,8 @@
     }
 
     function aplicarEstiloResultadoIMC(elemento, classificacao) {
-        // Remover estilos anteriores
         elemento.css('background-color', '');
 
-        // Aplicar cor baseada na classificação
         if (classificacao.includes('Magreza')) {
             elemento.css('background-color', 'rgba(255, 193, 7, 0.2)'); // Amarelo
         } else if (classificacao === 'Peso normal') {
@@ -254,13 +221,12 @@
         }
     }
 
-    // Função para verificar se a academia está aberta ou fechada
     function verificarStatusAcademia() {
         const agora = new Date();
         const diaSemana = agora.getDay(); // 0 = Domingo, 1 = Segunda, ..., 6 = Sábado
         const horas = agora.getHours();
         const minutos = agora.getMinutes();
-        const horaAtual = horas + minutos / 60; // Hora em formato decimal (ex: 14.5 = 14:30)
+        const horaAtual = horas + minutos / 60;
 
         const statusIndicator = $('#status-indicator');
         const statusText = $('#status-text');
@@ -269,26 +235,21 @@
         let estaAberta = false;
         let proximaAbertura = '';
 
-        // Formatar a hora atual
         const horaFormatada = `${String(horas).padStart(2, '0')}:${String(minutos).padStart(2, '0')}`;
 
-        // Verificar por dia da semana
         if (diaSemana >= 1 && diaSemana <= 5) {
-            // Segunda a Sexta: 06:00 - 23:00
             if (horaAtual >= 6 && horaAtual < 23) {
                 estaAberta = true;
             } else {
                 proximaAbertura = horaAtual >= 23 ? 'amanhã às 06:00' : 'hoje às 06:00';
             }
         } else if (diaSemana === 6) {
-            // Sábado: 08:00 - 18:00
             if (horaAtual >= 8 && horaAtual < 18) {
                 estaAberta = true;
             } else {
                 proximaAbertura = horaAtual >= 18 ? 'domingo às 08:00' : 'hoje às 08:00';
             }
         } else {
-            // Domingo: 08:00 - 14:00
             if (horaAtual >= 8 && horaAtual < 14) {
                 estaAberta = true;
             } else {
@@ -296,12 +257,10 @@
             }
         }
 
-        // Atualizar interface
         if (estaAberta) {
             statusIndicator.removeClass('fechado').addClass('aberto');
             statusText.removeClass('fechado').addClass('aberto').text('Aberta');
 
-            // Calcular horário de fechamento hoje
             let horarioFechamento;
             if (diaSemana >= 1 && diaSemana <= 5) {
                 horarioFechamento = '23:00';

@@ -1,4 +1,6 @@
-/* RESET E CONFIGURAÇÕES GLOBAIS */
+/* ==========================================================================
+   RESET E CONFIGURAÇÕES GLOBAIS
+   ========================================================================== */
 :root {
   --cor-primaria: #ff4500;
   --cor-secundaria: #222;
@@ -112,7 +114,9 @@ ul {
   font-weight: 600;
 }
 
-/* HEADER E NAVEGAÇÃO */
+/* ==========================================================================
+   HEADER E NAVEGAÇÃO
+   ========================================================================== */
 header {
   position: absolute;
   width: 100%;
@@ -158,7 +162,7 @@ header.fixo {
   color: var(--cor-primaria);
 }
 
-/* MENU DESKTOP - Regras específicas para telas grandes */
+
 @media (min-width: 993px) {
   .menu {
     display: block;
@@ -243,7 +247,6 @@ header.fixo {
     display: none;
   }
 
-  /* Reset de animações para desktop */
   .menu-nav li:nth-child(1),
   .menu-nav li:nth-child(2),
   .menu-nav li:nth-child(3),
@@ -254,7 +257,6 @@ header.fixo {
     animation-delay: 0s;
   }
 
-  /* Reset do estado ativo no desktop */
   .menu.ativo {
     right: auto;
     box-shadow: none;
@@ -265,7 +267,6 @@ header.fixo {
   }
 }
 
-/* Garantir que ícones nunca tenham decoração de texto */
 i {
   text-decoration: none;
 }
@@ -278,7 +279,6 @@ a:hover i {
   text-decoration: none;
 }
 
-/* BOTÃO HAMBÚRGUER - Escondido no desktop */
 @media (min-width: 993px) {
   .menu-btn {
     display: none;
@@ -344,7 +344,9 @@ a:hover i {
   background-color: var(--cor-primaria);
 }
 
-/* HERO SECTION */
+/* ==========================================================================
+   HERO SECTION
+   ========================================================================== */
 .hero {
   height: 100vh;
   background-size: cover;
@@ -377,7 +379,9 @@ a:hover i {
   gap: 1rem;
 }
 
-/* SOBRE NÓS */
+/* ==========================================================================
+   SOBRE NÓS
+   ========================================================================== */
 .sobre {
   background-color: var(--cor-cinza);
 }
@@ -434,7 +438,9 @@ a:hover i {
   margin-bottom: 0.5rem;
 }
 
-/* SERVIÇOS */
+/* ==========================================================================
+   SERVIÇOS
+   ========================================================================== */
 .servicos {
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../assets/images/bg.jpg');
   background-size: cover;
@@ -495,7 +501,9 @@ a:hover i {
   margin-bottom: 1.5rem;
 }
 
-/* Horários de Funcionamento */
+/* ==========================================================================
+   HORÁRIOS DE FUNCIONAMENTO
+   ========================================================================== */
 .calendario {
   background-color: var(--cor-cinza);
 }
@@ -617,13 +625,11 @@ a:hover i {
 
 .status-indicator.aberto {
   background-color: #28a745;
-  /* Verde */
   box-shadow: 0 0 10px #28a745;
 }
 
 .status-indicator.fechado {
   background-color: #dc3545;
-  /* Vermelho */
   box-shadow: 0 0 10px #dc3545;
 }
 
@@ -646,7 +652,9 @@ a:hover i {
   margin-top: 1rem;
 }
 
-/* IMC CALCULATOR */
+/* ==========================================================================
+   CALCULADORA IMC
+   ========================================================================== */
 .imc {
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../assets/images/bg.jpg');
   background-size: cover;
@@ -725,7 +733,9 @@ a:hover i {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* EQUIPE */
+/* ==========================================================================
+   EQUIPE
+   ========================================================================== */
 .equipe-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -826,7 +836,9 @@ a:hover i {
   font-weight: 500;
 }
 
-/* DEPOIMENTOS */
+/* ==========================================================================
+   DEPOIMENTOS
+   ========================================================================== */
 .depoimentos {
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../assets/images/bg.jpg');
   background-size: cover;
@@ -899,7 +911,9 @@ a:hover i {
   color: var(--cor-clara);
 }
 
-/* FOOTER */
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
 footer {
   background-color: var(--cor-escura);
   color: var(--cor-clara);
@@ -992,7 +1006,9 @@ footer {
   background-color: var(--cor-primaria);
 }
 
-/* BACK TO TOP */
+/* ==========================================================================
+   BACK TO TOP
+   ========================================================================== */
 .back-to-top {
   position: fixed;
   bottom: 2rem;
@@ -1043,7 +1059,9 @@ footer {
   transform: translateY(-5px);
 }
 
-/* RESPONSIVIDADE */
+/* ==========================================================================
+   RESPONSIVIDADE
+   ========================================================================== */
 @media (max-width: 992px) {
   .menu {
     position: fixed;
@@ -1149,7 +1167,6 @@ footer {
     display: none;
   }
 
-  /* Força remoção de qualquer decoração de texto no menu mobile */
   .menu .menu-nav a,
   .menu .menu-nav a:hover,
   .menu .menu-nav a:focus,
@@ -1241,12 +1258,10 @@ footer {
     justify-content: center;
   }
 
-  /* Garantir que o menu desktop não apareça no mobile */
   .menu {
     display: block;
   }
 
-  /* Overlay escuro atrás do menu */
   .menu::before {
     content: '';
     position: fixed;
@@ -1266,7 +1281,7 @@ footer {
     visibility: visible;
   }
 
-  /* Correção para animações só funcionarem quando menu ativo */
+
   .menu:not(.ativo) .menu-nav li {
     animation: none;
     opacity: 0;
@@ -1330,7 +1345,7 @@ footer {
     font-size: 1.8rem;
   }
 
-  /* Ajustes do menu para telas pequenas */
+
   .menu {
     width: 85%;
     min-width: 280px;
@@ -1362,7 +1377,7 @@ footer {
   }
 }
 
-/* Media query para telas com altura pequena (dispositivos móveis com barra de endereço) */
+
 @media (max-width: 992px) and (max-height: 700px) {
   .menu-content {
     padding: 2rem 2rem 1rem;
@@ -1397,7 +1412,7 @@ footer {
   }
 }
 
-/* Media query para telas muito pequenas (altura muito reduzida) */
+
 @media (max-width: 992px) and (max-height: 600px) {
   .menu-content {
     padding: 1.5rem 2rem 1rem;
@@ -1438,7 +1453,7 @@ footer {
   }
 }
 
-/* Media query para landscape em dispositivos móveis (altura extremamente pequena) */
+
 @media (max-width: 992px) and (max-height: 500px) {
   .menu-content {
     padding: 1rem 2rem 0.8rem;
