@@ -41,19 +41,33 @@
         $('.copyright p').text(`© ${anoAtual} MyGYM - Todos os direitos reservados`);
 
         menuBtn.on('click', function () {
-            menu.toggleClass('ativo');
-            $(this).toggleClass('ativo');
+            // Só funciona no mobile (max-width: 992px)
+            if (window.innerWidth <= 992) {
+                menu.toggleClass('ativo');
+                $(this).toggleClass('ativo');
+            }
         });
 
         // Fechar menu ao clicar em um link
         $('.menu-nav a').on('click', function () {
-            menu.removeClass('ativo');
-            menuBtn.removeClass('ativo');
+            // Só fecha no mobile
+            if (window.innerWidth <= 992) {
+                menu.removeClass('ativo');
+                menuBtn.removeClass('ativo');
+            }
         });
 
         // Fechar menu ao clicar no overlay
         $('.menu').on('click', function (e) {
-            if (e.target === this) {
+            if (e.target === this && window.innerWidth <= 992) {
+                menu.removeClass('ativo');
+                menuBtn.removeClass('ativo');
+            }
+        });
+
+        // Garantir que o menu feche ao redimensionar para desktop
+        $(window).on('resize', function () {
+            if (window.innerWidth > 992) {
                 menu.removeClass('ativo');
                 menuBtn.removeClass('ativo');
             }

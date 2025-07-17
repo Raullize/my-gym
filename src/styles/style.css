@@ -158,30 +158,111 @@ header.fixo {
   color: var(--cor-primaria);
 }
 
-.menu {
-  display: flex;
-  gap: 2rem;
-}
+/* MENU DESKTOP - Regras específicas para telas grandes */
+@media (min-width: 993px) {
+  .menu {
+    display: block;
+    position: static;
+    background: none;
+    backdrop-filter: none;
+    height: auto;
+    width: auto;
+    min-width: auto;
+    max-width: none;
+    transition: none;
+    z-index: auto;
+    border: none;
+    overflow: visible;
+  }
 
-.menu a {
-  color: var(--cor-clara);
-  font-weight: 500;
-  position: relative;
-}
+  .menu-content {
+    display: block;
+    height: auto;
+    min-height: auto;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 0;
+  }
 
-.menu a::after {
-  content: '';
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: var(--cor-primaria);
-  transition: width 0.3s ease;
-}
+  .menu-nav {
+    flex: none;
+    display: block;
+    justify-content: flex-start;
+  }
 
-.menu a:hover::after {
-  width: 100%;
+  .menu-nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu-nav li {
+    margin-bottom: 0;
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+
+  .menu-nav a {
+    color: var(--cor-clara);
+    font-weight: 500;
+    position: relative;
+    font-size: inherit;
+    padding: 0;
+    display: block;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    letter-spacing: normal;
+  }
+
+  .menu-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--cor-primaria);
+    transition: width 0.3s ease;
+    display: block;
+  }
+
+  .menu-nav a:hover::after {
+    width: 100%;
+    display: block;
+  }
+
+  .menu-nav a:hover {
+    color: var(--cor-clara);
+    transform: none;
+  }
+
+  .menu-footer {
+    display: none;
+  }
+
+  /* Reset de animações para desktop */
+  .menu-nav li:nth-child(1),
+  .menu-nav li:nth-child(2),
+  .menu-nav li:nth-child(3),
+  .menu-nav li:nth-child(4),
+  .menu-nav li:nth-child(5),
+  .menu-nav li:nth-child(6) {
+    animation: none;
+    animation-delay: 0s;
+  }
+
+  /* Reset do estado ativo no desktop */
+  .menu.ativo {
+    right: auto;
+    box-shadow: none;
+  }
+
+  .menu.ativo::before {
+    display: none;
+  }
 }
 
 /* Garantir que ícones nunca tenham decoração de texto */
@@ -195,6 +276,13 @@ a i {
 
 a:hover i {
   text-decoration: none;
+}
+
+/* BOTÃO HAMBÚRGUER - Escondido no desktop */
+@media (min-width: 993px) {
+  .menu-btn {
+    display: none;
+  }
 }
 
 .menu-btn {
@@ -1151,6 +1239,11 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  /* Garantir que o menu desktop não apareça no mobile */
+  .menu {
+    display: block;
   }
 
   /* Overlay escuro atrás do menu */
