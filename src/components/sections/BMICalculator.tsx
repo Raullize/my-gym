@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Calculator, RotateCcw } from 'lucide-react';
+import { Calculator, RotateCcw, Info } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { IMCResult } from '@/types';
 
@@ -104,7 +104,7 @@ export default function BMICalculator() {
                   value={weight}
                   onChange={(e) => setWeight(e.target.value)}
                   placeholder="Ex: 70.5"
-                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
+                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-900 placeholder-gray-500 ${
                     errors.weight ? 'border-red-500' : 'border-gray-300'
                   }`}
                 />
@@ -123,7 +123,7 @@ export default function BMICalculator() {
                   value={height}
                   onChange={(e) => setHeight(e.target.value)}
                   placeholder="Ex: 1.75"
-                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
+                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-900 placeholder-gray-500 ${
                     errors.height ? 'border-red-500' : 'border-gray-300'
                   }`}
                 />
@@ -180,20 +180,20 @@ export default function BMICalculator() {
               <h4 className="text-lg font-semibold text-gray-800 mb-4">Tabela de Referência IMC</h4>
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div className="flex justify-between">
-                  <span>Abaixo do peso:</span>
-                  <span className="text-blue-600 font-medium">Menor que 18,5</span>
+                  <span className="text-gray-800 font-medium">Abaixo do peso:</span>
+                  <span className="text-blue-600 font-semibold">Menor que 18,5</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Peso normal:</span>
-                  <span className="text-green-600 font-medium">18,5 - 24,9</span>
+                  <span className="text-gray-800 font-medium">Peso normal:</span>
+                  <span className="text-green-600 font-semibold">18,5 - 24,9</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Sobrepeso:</span>
-                  <span className="text-yellow-600 font-medium">25,0 - 29,9</span>
+                  <span className="text-gray-800 font-medium">Sobrepeso:</span>
+                  <span className="text-yellow-600 font-semibold">25,0 - 29,9</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Obesidade:</span>
-                  <span className="text-red-600 font-medium">30,0 ou mais</span>
+                  <span className="text-gray-800 font-medium">Obesidade:</span>
+                  <span className="text-red-600 font-semibold">30,0 ou mais</span>
                 </div>
               </div>
             </div>
