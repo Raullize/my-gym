@@ -77,15 +77,6 @@ export default function Header() {
               </li>
               <li>
                 <button 
-                  onClick={() => scrollToSection('calendario')}
-                  className="text-white font-medium hover:text-orange-500 transition-colors duration-300 relative group"
-                >
-                  Horários
-                  <span className="absolute bottom-[-5px] left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
-                </button>
-              </li>
-              <li>
-                <button 
                   onClick={() => scrollToSection('equipe')}
                   className="text-white font-medium hover:text-orange-500 transition-colors duration-300 relative group"
                 >
@@ -165,14 +156,6 @@ export default function Header() {
                     className="text-white text-xl font-medium hover:text-orange-500 transition-colors duration-300 block w-full text-left"
                   >
                     Serviços
-                  </button>
-                </li>
-                <li>
-                  <button 
-                    onClick={() => scrollToSection('calendario')}
-                    className="text-white text-xl font-medium hover:text-orange-500 transition-colors duration-300 block w-full text-left"
-                  >
-                    Horários
                   </button>
                 </li>
                 <li>

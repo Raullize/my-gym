@@ -28,5 +28,3 @@ export interface IMCResult {
   color: string;
   recommendation: string;
 }
-
-export type ScheduleStatus = 'open' | 'closed';

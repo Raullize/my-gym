@@ -47,7 +47,7 @@ export default function Hero() {
             ajudar você a alcançar seus objetivos.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               variant="primary" 
               size="lg"
@@ -55,14 +55,6 @@ export default function Hero() {
               className="w-full sm:w-auto"
             >
               Conheça nossa academia
-            </Button>
-            <Button 
-              variant="secondary" 
-              size="lg"
-              onClick={() => scrollToSection('calendario')}
-              className="w-full sm:w-auto"
-            >
-              Ver horários
             </Button>
           </div>
         </div>
