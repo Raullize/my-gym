@@ -1,42 +1,30 @@
 {
-  "name": "mygym",
-  "version": "1.0.0",
-  "description": "Website para academia MyGYM - Academia premium de fitness e bem-estar",
-  "main": "index.js",
+  "name": "mygym-nextjs",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "start": "live-server",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "dev": "next dev --turbopack",
+    "build": "next build --turbopack",
+    "start": "next start",
+    "lint": "eslint"
   },
-  "keywords": [
-    "academia",
-    "fitness",
-    "saúde",
-    "bem-estar",
-    "musculação",
-    "treinamento",
-    "personal trainer"
-  ],
-  "authors": [
-    {
-      "name": "Miguel Leonardo Strapazon Lewandowski",
-      "email": "miguelstrapazonl@gmail.com",
-      "homepage": "https://depsmodels.com",
-      "role": "Developer"
-    },
-    {
-      "name": "Raul Lize Teixeira",
-      "email": "raullizeteixeira@gmail.com",
-      "homepage": "https://depsmodels.com",
-      "role": "Developer"
-    }
-  ],
-  "license": "ISC",
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.544.0",
+    "next": "15.5.3",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "tailwind-merge": "^3.3.1"
+  },
   "devDependencies": {
-    "eslint": "^8.57.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.1.3",
-    "live-server": "^1.2.2"
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.5.3",
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }
