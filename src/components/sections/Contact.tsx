@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle } from 'lucide-react';
+import { Send, CheckCircle } from 'lucide-react';
 
 export const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -48,96 +48,70 @@ export const Contact: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Informações de Contato */}
-          <div className="space-y-6">
-            <div className="bg-black/40 backdrop-blur-sm border border-gray-700 rounded-2xl p-6">
-              <h3 className="text-xl font-bold text-white mb-4">Informações de Contato</h3>
-              
-              <div className="space-y-4">
-                <div className="flex items-start">
-                  <MapPin className="text-orange-500 mr-3 mt-1 flex-shrink-0" size={20} />
-                  <div>
-                    <h4 className="text-white font-semibold mb-1 text-sm">Endereço</h4>
-                    <p className="text-gray-300 text-sm">Rua das Flores, 123 - Centro</p>
-                    <p className="text-gray-300 text-sm">São Paulo/SP - CEP: 01234-567</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <Phone className="text-orange-500 mr-3 mt-1 flex-shrink-0" size={20} />
-                  <div>
-                    <h4 className="text-white font-semibold mb-1 text-sm">Telefones</h4>
-                    <p className="text-gray-300 text-sm">(11) 9999-9999 | (11) 3333-3333</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <Mail className="text-orange-500 mr-3 mt-1 flex-shrink-0" size={20} />
-                  <div>
-                    <h4 className="text-white font-semibold mb-1 text-sm">E-mail</h4>
-                    <p className="text-gray-300 text-sm">contato@mygym.com.br</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <Clock className="text-orange-500 mr-3 mt-1 flex-shrink-0" size={20} />
-                  <div>
-                    <h4 className="text-white font-semibold mb-1 text-sm">Horário</h4>
-                    <p className="text-gray-300 text-sm">Seg-Sex: 06:00-22:00</p>
-                    <p className="text-gray-300 text-sm">Sáb: 08:00-18:00 | Dom: 08:00-16:00</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Formulário de Contato */}
-          <div className="bg-black/40 backdrop-blur-sm border border-gray-700 rounded-2xl p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Envie uma Mensagem</h3>
+        {/* Formulário de Contato Centralizado */}
+        <div className="max-w-2xl mx-auto">
+          <div className="bg-black/40 backdrop-blur-sm border border-gray-700 rounded-2xl p-8">
+            <h3 className="text-2xl font-bold text-white mb-6 text-center">Envie uma Mensagem</h3>
             
             {isSubmitted ? (
-              <div className="text-center py-6">
-                <CheckCircle className="text-green-500 w-12 h-12 mx-auto mb-3" />
-                <h4 className="text-lg font-bold text-white mb-2">Mensagem Enviada!</h4>
-                <p className="text-gray-300 text-sm">Entraremos em contato em breve.</p>
+              <div className="text-center py-8">
+                <CheckCircle className="text-green-500 w-16 h-16 mx-auto mb-4" />
+                <h4 className="text-xl font-bold text-white mb-3">Mensagem Enviada!</h4>
+                <p className="text-gray-300">Entraremos em contato em breve.</p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="name" className="block text-white font-medium mb-2">
+                      Nome Completo
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-3 bg-black/30 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all"
+                      placeholder="Seu nome completo"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="email" className="block text-white font-medium mb-2">
+                      E-mail
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-3 bg-black/30 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all"
+                      placeholder="seu@email.com"
+                    />
+                  </div>
+                </div>
+
                 <div>
-                  <label htmlFor="name" className="block text-white font-medium mb-1 text-sm">
-                    Nome Completo
+                  <label htmlFor="phone" className="block text-white font-medium mb-2">
+                    Telefone (opcional)
                   </label>
                   <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value={formData.phone}
                     onChange={handleInputChange}
-                    required
-                    className="w-full px-3 py-2 bg-black/30 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-orange-500 transition-colors text-sm"
-                    placeholder="Seu nome completo"
+                    className="w-full px-4 py-3 bg-black/30 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all"
+                    placeholder="(11) 99999-9999"
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="email" className="block text-white font-medium mb-1 text-sm">
-                    E-mail
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-3 py-2 bg-black/30 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-orange-500 transition-colors text-sm"
-                    placeholder="seu@email.com"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="message" className="block text-white font-medium mb-1 text-sm">
+                  <label htmlFor="message" className="block text-white font-medium mb-2">
                     Mensagem
                   </label>
                   <textarea
@@ -146,17 +120,17 @@ export const Contact: React.FC = () => {
                     value={formData.message}
                     onChange={handleInputChange}
                     required
-                    rows={3}
-                    className="w-full px-3 py-2 bg-black/30 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-orange-500 transition-colors resize-none text-sm"
-                    placeholder="Como podemos ajudar você?"
+                    rows={5}
+                    className="w-full px-4 py-3 bg-black/30 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all resize-none"
+                    placeholder="Como podemos ajudar você? Conte-nos sobre seus objetivos fitness..."
                   />
                 </div>
                 
                 <button
                   type="submit"
-                  className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-300 flex items-center justify-center text-sm"
+                  className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-6 rounded-lg transition-all duration-300 flex items-center justify-center text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                 >
-                  <Send className="mr-2" size={16} />
+                  <Send className="mr-3" size={20} />
                   Enviar Mensagem
                 </button>
               </form>
