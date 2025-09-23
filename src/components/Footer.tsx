@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Twitter } from 'lucide-react';
 
 export default function Footer() {
@@ -11,16 +10,9 @@ export default function Footer() {
     <footer className="bg-black text-white">
       <div className="container mx-auto px-8 lg:px-12 py-12">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Logo e Descrição */}
+          {/* Descrição */}
           <div className="lg:col-span-1">
-            <div className="flex items-center mb-4">
-              <Image
-                src="/logo.png"
-                alt="MyGym Logo"
-                width={40}
-                height={40}
-                className="mr-3"
-              />
+            <div className="mb-4">
               <h3 className="text-2xl font-bold">
                 <span className="text-orange-500">My</span>Gym
               </h3>
