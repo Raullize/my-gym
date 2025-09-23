@@ -20,38 +20,11 @@ Esta landing page foi desenvolvida como um modelo pronto para academias que aind
 
 ## 🛠️ Tecnologias Utilizadas
 
-- HTML5
-- CSS3
-- JavaScript
-- jQuery
-- Font Awesome
-- Google Fonts
+- Detalhar...
 
 ## 🚀 Como Testar
 
-Para testar esta aplicação usando o Live Server:
-
-1. Certifique-se de ter o Visual Studio Code instalado
-
-2. Instale a extensão "Live Server":
-   - Abra o VS Code
-   - Clique no ícone de extensões na barra lateral (ou pressione Ctrl+Shift+X)
-   - Pesquise por "Live Server"
-   - Instale a extensão desenvolvida por Ritwick Dey
-
-3. Abra o projeto no VS Code:
-   - Arquivo > Abrir Pasta
-   - Selecione a pasta do projeto
-
-4. Inicie o Live Server:
-   - Clique com o botão direito no arquivo `index.html`
-   - Selecione "Open with Live Server"
-   - OU clique no botão "Go Live" na barra de status na parte inferior do VS Code
-
-5. O navegador abrirá automaticamente mostrando o site em execução
-   - Disponível em `http://127.0.0.1:5501` conforme configurado
-
-6. O Live Server oferece recarregamento automático da página quando você fizer alterações no código
+- Detalhar...
 
 ## 📐 Estrutura
 
