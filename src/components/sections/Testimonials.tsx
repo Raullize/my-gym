@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Star, Quote } from 'lucide-react';
+import { Quote, ChevronLeft, ChevronRight, Star } from 'lucide-react';
 import Image from 'next/image';
 import { Testimonial } from '@/types';
 
@@ -60,9 +60,9 @@ export default function Testimonials() {
   return (
     <section 
       id="depoimentos" 
-      className="py-20 bg-cover bg-center bg-no-repeat relative"
+      className="py-20 bg-cover bg-center bg-no-repeat relative bg-fixed"
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('/images/bg.jpg')`
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/images/bg.jpg')`
       }}
     >
       <div className="container mx-auto px-8 lg:px-12">
@@ -75,21 +75,39 @@ export default function Testimonials() {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          <div className="relative bg-black bg-opacity-60 backdrop-blur-sm rounded-lg p-8 md:p-12 border border-gray-700 min-h-[400px] flex flex-col justify-between">
-            <Quote className="text-orange-500 mb-6" size={48} />
+        <div className="max-w-3xl mx-auto relative">
+          {/* Botão Anterior */}
+          <button
+            onClick={prevTestimonial}
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-orange-500 hover:bg-orange-600 text-white p-2 rounded-full shadow-lg transition-colors duration-200"
+            aria-label="Depoimento anterior"
+          >
+            <ChevronLeft size={20} />
+          </button>
+
+          {/* Botão Próximo */}
+          <button
+            onClick={nextTestimonial}
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-orange-500 hover:bg-orange-600 text-white p-2 rounded-full shadow-lg transition-colors duration-200"
+            aria-label="Próximo depoimento"
+          >
+            <ChevronRight size={20} />
+          </button>
+
+          <div className="relative bg-black bg-opacity-60 backdrop-blur-sm rounded-lg p-6 md:p-8 border border-gray-700 min-h-[320px] flex flex-col justify-between">
+            <Quote className="text-orange-500 mb-4" size={36} />
             
             <div className="text-center flex-1 flex flex-col justify-center">
               {/* Texto do depoimento */}
-              <div className="mb-8">
-                <p className="text-lg md:text-xl text-gray-200 leading-relaxed italic min-h-[120px] flex items-center justify-center">
+              <div className="mb-6">
+                <p className="text-base md:text-lg text-gray-200 leading-relaxed italic min-h-[80px] flex items-center justify-center">
                   &ldquo;{testimonials[currentIndex].text}&rdquo;
                 </p>
               </div>
               
               {/* Avatar do cliente */}
-              <div className="flex justify-center mb-6">
-                <div className="relative w-20 h-20 rounded-full overflow-hidden border-4 border-orange-500 shadow-lg">
+              <div className="flex justify-center mb-4">
+                <div className="relative w-16 h-16 rounded-full overflow-hidden border-3 border-orange-500 shadow-lg">
                   <Image
                     src={testimonials[currentIndex].image}
                     alt={`Foto de ${testimonials[currentIndex].name}`}
@@ -100,16 +118,16 @@ export default function Testimonials() {
               </div>
               
               {/* Estrelas */}
-              <div className="flex justify-center mb-4">
+              <div className="flex justify-center mb-3">
                 {renderStars(testimonials[currentIndex].rating)}
               </div>
               
               {/* Nome e título */}
               <div>
-                <h4 className="text-xl font-semibold text-white mb-2">
+                <h4 className="text-lg font-semibold text-white mb-1">
                   {testimonials[currentIndex].name}
                 </h4>
-                <p className="text-orange-400 font-medium">Aluno MyGym</p>
+                <p className="text-orange-400 font-medium text-sm">Aluno MyGym</p>
               </div>
             </div>
           </div>
