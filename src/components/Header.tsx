@@ -38,7 +38,7 @@ export default function Header() {
     <header className={`fixed w-full z-50 transition-all duration-300 ${
       isScrolled ? 'bg-black shadow-lg' : 'bg-transparent'
     }`}>
-      <div className="container mx-auto px-8 lg:px-12">
+      <div className="container mx-auto px-12 lg:px-20">
         <nav className="flex justify-between items-center py-6">
           {/* Logo */}
           <Link href="/" className="text-2xl font-bold text-white">
