@@ -1,6 +1,6 @@
 {
-  "name": "mygym-nextjs",
-  "version": "0.1.0",
+  "name": "my-gym-academy",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
