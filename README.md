@@ -11,12 +11,13 @@ MyGym é uma landing page moderna e responsiva desenvolvida para academias que b
 - 🔍 Otimizado para SEO com meta tags completas
 - ⚡ Carregamento rápido com Next.js 15
 - 📊 Calculadora de IMC integrada e interativa
-- 🕒 Seção de horários de funcionamento
 - 👥 Apresentação da equipe com cards personalizados
 - 💬 Depoimentos de clientes com carousel
 - 📞 Formulário de contato funcional
 - 🎯 Seções de serviços e sobre a academia
 - 🌟 Animações suaves e transições elegantes
+- ⬆️ Botão "Voltar ao Topo" com animações suaves
+- 🎨 Interface otimizada com componentes UI reutilizáveis
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -76,15 +77,16 @@ src/
 │   ├── Header.tsx         # Cabeçalho com navegação
 │   ├── Footer.tsx         # Rodapé com informações
 │   ├── ScrollToTopButton.tsx # Botão voltar ao topo
-│   └── sections/          # Seções da página
-│       ├── Hero.tsx       # Seção principal
-│       ├── About.tsx      # Sobre a academia
-│       ├── Services.tsx   # Serviços oferecidos
-│       ├── Schedule.tsx   # Horários de funcionamento
-│       ├── BMICalculator.tsx # Calculadora de IMC
-│       ├── Team.tsx       # Equipe de profissionais
-│       ├── Testimonials.tsx # Depoimentos
-│       └── Contact.tsx    # Formulário de contato
+│   ├── sections/          # Seções da página
+│   │   ├── Hero.tsx       # Seção principal
+│   │   ├── About.tsx      # Sobre a academia
+│   │   ├── Services.tsx   # Serviços oferecidos
+│   │   ├── BMICalculator.tsx # Calculadora de IMC
+│   │   ├── Team.tsx       # Equipe de profissionais
+│   │   ├── Testimonials.tsx # Depoimentos
+│   │   └── Contact.tsx    # Formulário de contato
+│   └── ui/               # Componentes UI reutilizáveis
+│       └── Button.tsx    # Componente de botão
 ├── types/
 │   └── index.ts          # Definições de tipos TypeScript
 └── lib/
@@ -97,7 +99,6 @@ src/
 - **Hero**: Seção principal com chamada para ação
 - **Sobre**: Apresentação da academia com imagens e benefícios
 - **Serviços**: Cards com os principais serviços oferecidos
-- **Horários**: Tabela com horários de funcionamento
 - **Calculadora IMC**: Ferramenta interativa para cálculo de IMC
 - **Equipe**: Apresentação dos profissionais com fotos e especialidades
 - **Depoimentos**: Carousel com opiniões de clientes
@@ -113,6 +114,17 @@ O projeto foi desenvolvido para ser facilmente personalizável:
 3. **Imagens**: Substitua as imagens na pasta `public/images/`
 4. **Logo**: Atualize a logo no Header e Footer
 5. **Informações de Contato**: Modifique dados no Footer e seção Contact
+6. **Componentes UI**: Personalize botões e outros elementos na pasta `src/components/ui/`
+
+## 🎨 Componentes UI
+
+O projeto inclui componentes UI reutilizáveis:
+
+- **Button**: Componente de botão com variantes `primary` e `secondary`
+  - Variante `primary`: Botão laranja para ações principais
+  - Variante `secondary`: Botão com borda para ações secundárias
+- **Tamanhos**: `sm`, `md`, `lg` para diferentes contextos
+- **Totalmente customizável** via props e classes CSS
 
 ## 📱 Responsividade
 
