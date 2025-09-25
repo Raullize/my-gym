@@ -18,7 +18,7 @@ export const Button: React.FC<ButtonProps> = ({
   
   const variantClasses = {
     primary: 'bg-orange-500 text-white hover:bg-transparent hover:text-orange-500 hover:shadow-[inset_0_0_0_2px_theme(colors.orange.500)]',
-    secondary: 'bg-transparent text-white shadow-[inset_0_0_0_2px_white] hover:bg-white hover:text-orange-500'
+    secondary: 'bg-transparent text-gray-700 shadow-[inset_0_0_0_2px_theme(colors.gray.700)] hover:bg-gray-700 hover:text-white'
   };
 
   const sizeClasses = {
