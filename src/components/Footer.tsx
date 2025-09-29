@@ -75,6 +75,12 @@ export default function Footer() {
                   Depoimentos
                 </a>
               </li>
+
+              <li>
+                <a href="#contato" className="text-gray-300 hover:text-white transition-colors duration-200">
+                  Contato
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -85,17 +91,16 @@ export default function Footer() {
               <div className="flex items-start">
                 <MapPin className="text-orange-500 mr-3 mt-1 flex-shrink-0" size={18} />
                 <div>
-                  <p className="text-gray-300">Rua das Flores, 123</p>
-                  <p className="text-gray-300">Centro - São Paulo/SP</p>
-                  <p className="text-gray-300">CEP: 01234-567</p>
+                  <p className="text-gray-300">Porto Alegre, RS</p>
+                  <p className="text-gray-300">Brasil</p>
                 </div>
               </div>
               
               <div className="flex items-center">
                 <Phone className="text-orange-500 mr-3 flex-shrink-0" size={18} />
                 <div>
-                  <p className="text-gray-300">(11) 9999-9999</p>
-                  <p className="text-gray-300">(11) 3333-3333</p>
+                  <p className="text-gray-300">(51) 9999-9999</p>
+                  <p className="text-gray-300">(51) 3333-3333</p>
                 </div>
               </div>
               
