@@ -129,8 +129,11 @@ export default function Header() {
         isMenuOpen ? 'translate-x-0' : 'translate-x-full'
       }`}>
         <div className="flex flex-col h-full">
-          {/* Close Button */}
-          <div className="flex justify-end p-6">
+          {/* Header with Logo and Close Button */}
+          <div className="flex justify-between items-center p-6 border-b border-gray-700">
+            <Link href="/" className="text-2xl font-bold text-white" onClick={closeMenu}>
+              My<span className="text-orange-500">GYM</span>
+            </Link>
             <button
               onClick={closeMenu}
               className="text-white p-2 hover:text-orange-500 transition-colors duration-300"
@@ -140,7 +143,7 @@ export default function Header() {
             </button>
           </div>
           
-          <div className="flex-1 flex flex-col justify-start px-6 pt-8">
+          <div className="flex-1 flex flex-col justify-start px-6 pt-6">
             <nav className="mb-8">
               <ul className="space-y-6">
                 <li>
